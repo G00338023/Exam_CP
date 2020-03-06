@@ -7,7 +7,8 @@ public class Employee {
     int PhoneNumber;
     String EmploymentType;
     int Age;
-    String length;
+
+    //String length;
 
     public Employee(String title, String name, String PPS, int phoneNumber, String employmentType, int age) {
         Title = title;
@@ -23,7 +24,7 @@ public class Employee {
             throw new IllegalArgumentException("Missing/Invalid name");
         } else if (PPS == "") {
             throw new IllegalArgumentException("Missing PPS");
-        } else if (phoneNumber.length() > 7) {
+        } else if (phoneNumber.length() > 7) {                          //phoneNumber.length <=6 || phoneNumber.Length >=8 )
             throw new IllegalArgumentException("Invalid phoneNumber");
         }
         else if (employmentType == "") {
@@ -60,4 +61,3 @@ public class Employee {
 }
 
 
-//phoneNumber.length <=6 || phoneNumber.Length >=8 )
